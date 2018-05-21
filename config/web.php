@@ -53,7 +53,10 @@ $config = [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',
-                    'controller' => 'vehiculo'
+                    'controller' => 'vehiculo',
+                    'extraPatterns' => [
+                        'GET obtener' => 'obtener',
+                    ],
                 ],
                 
             ],

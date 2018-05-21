@@ -2,12 +2,18 @@
 
 namespace app\controllers;
 
+use app\models\Vehiculo;
 use yii\rest\ActiveController;
 
 
 
 class VehiculoController extends ActiveController
 {
+
+
+    public $modelClass = 'app\models\Vehiculo';
+
+
     public static function allowedDomains()
     {
         return [
@@ -39,7 +45,10 @@ class VehiculoController extends ActiveController
         ]);
     }
 
-    public $modelClass = 'app\models\Vehiculo';
+
+    public function actionObtener(){
+        return Vehiculo::find()->all();
+    }
 
 }
 
