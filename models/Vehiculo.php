@@ -76,6 +76,8 @@ class Vehiculo extends \yii\db\ActiveRecord
         return $this->hasOne(Motor::className(), ['nro_serie' => 'nro_serie_motor']);
     }
 
+    
+
     public function extraFields() {
         return [
             'motor' => 'nroSerieMotor',

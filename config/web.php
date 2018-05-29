@@ -12,6 +12,12 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+        'response' => [
+            'class' => 'yii\web\Response',
+            'on beforeSend' => function ($event) {
+                header("Access-Control-Allow-Origin: *");
+            }
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'I9a8QHOPJoDQxPYK7-baQoANAaNLg591',
@@ -55,7 +61,7 @@ $config = [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'vehiculo',
                     'extraPatterns' => [
-                        'GET obtener' => 'obtener',
+                        'POST crear' => 'crear',
                     ],
                 ],
                 
