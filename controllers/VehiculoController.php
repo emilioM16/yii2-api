@@ -41,9 +41,9 @@ class VehiculoController extends ActiveController
                 'Origin' => ['*'],
                 'Access-Control-Request-Method' => ['POST', 'GET'],
                 // Allow only POST and PUT methods
-                'Access-Control-Request-Headers' => [' X-Requested-With', 'Origin', 'Content-Type','accept','Authorization'],
+                'Access-Control-Request-Headers' => ['Content-Type'],
                 // Allow only headers 'X-Wsse'
-                // 'Access-Control-Allow-Credentials' => true,
+                'Access-Control-Allow-Credentials' => true,
                 // Allow OPTIONS caching
                 'Access-Control-Max-Age' => 3600,
                 // Allow the X-Pagination-Current-Page header to be exposed to the browser.

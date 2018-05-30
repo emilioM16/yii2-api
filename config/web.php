@@ -16,6 +16,10 @@ $config = [
             'class' => 'yii\web\Response',
             'on beforeSend' => function ($event) {
                 header("Access-Control-Allow-Origin: *");
+                header("Access-Control-Allow-Headers:Content-Type");
+                header("Access-Control-Allow-Methods:POST,GET,OPTIONS");
+                // header("Accept: application/json");
+                // header("Content-Type: application/json;charset=utf-8");
             }
         ],
         'request' => [
@@ -62,6 +66,7 @@ $config = [
                     'controller' => 'vehiculo',
                     'extraPatterns' => [
                         'POST crear' => 'crear',
+                        'OPTIONS crear' => 'crear'
                     ],
                 ],
                 
